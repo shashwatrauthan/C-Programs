@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+struct drivers
+{
+  char name[40];
+  char dl_no[40];
+  char route[40];
+  char kms[40];
+}arr[3];
+
+
+int main()
+{
+  // INPUT
+  for(int i=0;i<3;i++)
+  {
+    printf("++++++++++++ Enter Details of Driver %d ++++++++++++\n",i+1);
+    printf("Name : ");
+    gets(arr[i].name);
+    printf("DL Number : ");
+    gets(arr[i].dl_no);
+    printf("Route : ");
+    gets(arr[i].route);
+    printf("Kms : ");
+    gets(arr[i].kms);
+    printf("+++++++++++++++++++++++++++++++++++++++++++++++++++\n\n");
+  }
+
+  printf("\n");
+  // OUTPUT
+
+  for(int i=0;i<3;i++)
+  {
+    printf("+++++++++++++++ Details of Driver %d +++++++++++++++\n",i+1);
+    printf("Name : %s\n",arr[i].name);
+    printf("DL Number : %s\n",arr[i].dl_no);
+    printf("Route : %s\n",arr[i].route);
+    printf("Kms : %s\n",arr[i].kms);
+    printf("+++++++++++++++++++++++++++++++++++++++++++++++++++\n\n");
+  }
+  
+  return 0;
+}
