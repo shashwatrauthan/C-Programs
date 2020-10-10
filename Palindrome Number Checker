@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+int ispalindrome(int n)
+{
+  int d = 0;
+  int s = 0;
+  int num = n;
+  while(n!=0)
+  {
+    d = n%10;
+    s = (s*10)+d;
+    n = n/10;
+  }
+  if (num == s)
+  return 1;
+  else
+  return 0;
+}
+
+int main()
+{
+  int n;
+  printf("Enter the number to check whether it is Palindrome or not :\n");
+  scanf("%d",&n);
+  if(ispalindrome(n))
+  {
+    printf("The number is Palindrome");
+  }
+  else
+  {
+    printf("The number is not Palindrome");
+  }
+
+  return 0;
+}
