@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main(int argc,char *argv[])
+{
+  int out;
+  int c = atoi(argv[2]);
+  int d = atoi(argv[3]);
+  if(strcmp(argv[1],"add")==0)
+  {
+    out = c + d;
+    printf("%d",out);
+  }
+  else if(strcmp(argv[1],"subtract")==0)
+  {
+    out = c - d;
+    printf("%d",out);
+  }
+  else if(strcmp(argv[1],"multiply")==0)
+  {
+    out = c * d;
+    printf("%d",out);
+  }
+  else if(strcmp(argv[1],"divide")==0)
+  {
+    out = c / d;
+    printf("%d",out);
+  }
+  else
+  {
+    printf("Wrong Arguments Passed");
+  }
+
+  return 0;
+}
