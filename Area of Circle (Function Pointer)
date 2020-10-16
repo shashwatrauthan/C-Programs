@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+double edistance(int x1,int y1,int x2,int y2)
+{
+  double dist;
+  dist = sqrt(pow(x1-y1,2) + pow(x2-y2,2));
+  return dist;
+}
+
+float arcircle(int x1,int y1,int x2,int y2,double (*ptr)(int,int,int,int))
+{
+  float area;
+  double dist;
+  dist = ptr(x1,y1,x2,y2);
+  area = 3.14 * dist*dist;
+  return area;
+}
+
+int main()
+{
+  int x1,y1,x2,y2;
+  float area;
+  printf("Enter Values of x1 & y1 : ");
+  scanf("%d %d",&x1,&y1);
+  printf("Enter Values of x2 & y2 : ");
+  scanf("%d %d",&x2,&y2);
+  double (*ptr)(int,int,int,int);
+  ptr = edistance;
+  area = arcircle(x1,y1,x2,y2,ptr);
+  printf("Area of Circle is : %f",area);
+}
